@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Library',{useNewUrlParser: true, useUnifiedTopology: true});
+var MDATABASE = "mongodb+srv://subin:subin@cluster0.lz5qy.mongodb.net/library";
+mongoose.connect(MDATABASE ||'mongodb://localhost:27017/Library',{useNewUrlParser: true, useUnifiedTopology: true});
 const Schema = mongoose.Schema;
 mongoose.set("useFindAndModify", false);// part 2 point 9
 
